@@ -101,5 +101,9 @@ Kubectl is now configured to use the cluster.
 
 ![minikube ssh](assets/minikube-ssh.png)
 
+## 參考文件
+
+* minikube readme: https://github.com/kubernetes/minikube/blob/master/README.md
+
 
 
