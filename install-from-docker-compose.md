@@ -38,6 +38,9 @@ docker run \
 
 This actually runs the kubelet, which in turn runs a pod that contains the other master components.
 
+If you running Docker for Mac/Windows, please add shared folder on `/var/lib/kubelet/`.
+
+
 Step Three: Run the service proxy
 
 ```
