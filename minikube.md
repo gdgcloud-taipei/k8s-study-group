@@ -104,6 +104,7 @@ Kubectl is now configured to use the cluster.
 ## 參考文件
 
 * minikube readme: https://github.com/kubernetes/minikube/blob/master/README.md
+* minikube release note: https://github.com/kubernetes/minikube/releases
 
 
 
