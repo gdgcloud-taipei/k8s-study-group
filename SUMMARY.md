@@ -1,7 +1,7 @@
 # Summary
 
 * [簡介](README.md)
-   * Kubernetes的各項
+   * Kubernetes的元件
 * [從安裝說起](installation.md)
    * [單機版K8S - minikube](minikube.md)
    * [使用docker-compose安裝kubernetes](install-from-docker-compose.md)
