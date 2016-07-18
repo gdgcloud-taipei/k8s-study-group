@@ -1,6 +1,5 @@
 # Kubernetes概念
 
-
 ## Cluster
 Kubernetes cluster是k8s所使用的一個以上的實體或虛擬主機以及其他的基礎建設(infrastructure)資源的集合，用以提供給k8s使用者執行相關應用程是使用。
 
