@@ -64,10 +64,19 @@ Mac:
 wget https://storage.googleapis.com/kubernetes-release/release/v1.0.1/bin/darwin/amd64/kubectl && mv kubectl /usr/bin/ && chmod u+x /usr/bin/kubectl
 ```
 
-除了直接下載執行檔案，也可以使用google cloud所提供的工具來安裝：
+除了直接下載執行檔案，也可以使用 Google Cloud SDK 所提供的工具來安裝：
+
+
+安裝 Google Cloud SDK:
 
 ```
 curl https://sdk.cloud.google.com | bash
+```
+
+透過 Google Cloud SDK 安裝 Kubectl
+
+```
+gcloud components install kubectl
 ```
 
 
