@@ -1,5 +1,7 @@
 # Kubernetes概念
 
+開始kubernetes前，有些專有名詞在這邊先介紹一下，讓未來研讀k8s的文件可以更得心應手。(下面文件翻譯自：http://kubernetes.io/docs/user-guide/)
+
 ## Cluster
 Kubernetes cluster是k8s所使用的一個以上的實體或虛擬主機以及其他的基礎建設(infrastructure)資源的集合，用以提供給k8s使用者執行相關應用程是使用。
 
