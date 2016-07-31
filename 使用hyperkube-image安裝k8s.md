@@ -117,7 +117,6 @@ curl localhost:8080
 
 接下來設定kubectl的環境，其中set-cluster中的位置，可以依照自己的需求，可以改變成server的對外位置...
 
-
 ```
 kubectl config set-cluster test-doc --server=http://localhost:8080
 kubectl config set-context test-doc --cluster=test-doc
