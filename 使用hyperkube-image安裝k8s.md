@@ -123,6 +123,9 @@ kubectl config set-context test-doc --cluster=test-doc
 kubectl config use-context test-doc
 ```
 
+接下來就可以使用kubectl來建立自己的pods或其他服務了唷～
+
+
 ## 參考文獻
 
 * 有滿清楚的Shared Mount的說明：http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation
