@@ -99,6 +99,31 @@ ab2fe580eefe        gcr.io/google_containers/pause-amd64:3.0                    
 root@simon-docker1:~#
 ```
 
+## 連線與使用
+
+首先，如果環境已經有對外網路，可以直接使用該對外網路的位置... 如果，未開放對外網路，可以透過反向代理來將遠端的port綁定到本機位置...
+
+```
+docker-machine ssh `docker-machine active` -N -L 8080:localhost:8080
+```
+如果綁定沒問題，只要透過curl即可測試
+
+```
+curl localhost:8080
+```
+
+只要看得到api結果，則代表設定無誤...
+
+
+接下來設定kubectl的環境，其中set-cluster中的位置，可以依照自己的需求，可以改變成server的對外位置...
+
+
+```
+kubectl config set-cluster test-doc --server=http://localhost:8080
+kubectl config set-context test-doc --cluster=test-doc
+kubectl config use-context test-doc
+```
+
 ## 參考文獻
 
 * 有滿清楚的Shared Mount的說明：http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation
