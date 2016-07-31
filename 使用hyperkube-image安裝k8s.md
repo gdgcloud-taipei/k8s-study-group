@@ -24,6 +24,8 @@ docker-machine create --driver google \
 
 ## 環境準備
 
+目前已經成功測試於docker-machine所建立的ubuntu 15.x環境，該環境為預載docker v1.12.0的系統。
+
 ### 先設定要安裝的K8S版本與環境參數
 
 下面指定要安裝stable的版本，並且為amd64的CPU Arch
