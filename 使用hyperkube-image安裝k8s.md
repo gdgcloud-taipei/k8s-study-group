@@ -38,7 +38,7 @@ export ARCH=amd64
 
 ### 準備K8S所會用到的Shared Mount
 
-Shared Mount是為了讓
+Shared Mount是為了讓K8S在啟動Container時候有一個交換資訊的空間，
 
 ```
 DOCKER_CONF=$(systemctl cat docker | head -1 | awk '{print $2}') 
@@ -50,3 +50,13 @@ mkdir -p /var/lib/kubelet
 mount --bind /var/lib/kubelet /var/lib/kubelet 
 mount --make-shared /var/lib/kubelet
 ```
+
+## 啟動hyperkube
+
+```
+docker run -d \ --volume="/sys:/sys:rw" \ --volume="/var/lib/docker/:/var/lib/docker:rw" \ --volume="/var/lib/kubelet/:/var/lib/kubelet:rw,shared" \ --volume="/var/run:/var/run:rw" \ --net=host \ --pid=host \ --privileged \ gcr.io/google_containers/hyperkube-${ARCH}:${K8S_VERSION} \ /hyperkube kubelet \ --hostname-override=127.0.0.1 \ --api-servers=http://localhost:8080 \ --config=/etc/kubernetes/manifests \ --cluster-dns=10.0.0.10 \ --cluster-domain=cluster.local \ --allow-privileged --v=2
+```
+
+## 參考文獻
+
+* 有滿清楚的Shared Mount的說明：http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation
