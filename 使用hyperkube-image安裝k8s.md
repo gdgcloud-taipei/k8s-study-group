@@ -126,6 +126,19 @@ kubectl config use-context test-doc
 
 接下來就可以使用kubectl來建立自己的pods或其他服務了唷～
 
+## 清除環境
+
+如果剛剛用GCE建立環境的話，別忘記用完時候要清除資源... 
+
+```
+$ docker-machine rm -f simon-docker
+About to remove simon-docker
+(simon-docker) Deleting instance.
+(simon-docker) Waiting for instance to delete.
+(simon-docker) Deleting disk.
+(simon-docker) Waiting for disk to delete.
+Successfully removed simon-docker
+```
 
 ## 參考文獻
 
