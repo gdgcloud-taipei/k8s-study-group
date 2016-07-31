@@ -1,6 +1,5 @@
 # 使用hyperkube image安裝docker
 
-
 首先，如果尚未有docker環境，可以透過docker machine啟動Google Compute Engine上的主機服務... 如未指定image參數，預設會使用ubuntu 15的image環境...
 
 ```
