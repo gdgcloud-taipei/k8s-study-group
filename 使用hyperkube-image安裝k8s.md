@@ -128,4 +128,5 @@ kubectl config use-context test-doc
 
 ## 參考文獻
 
+* kubernetes官方安裝文件：http://kubernetes.io/docs/getting-started-guides/docker/
 * 有滿清楚的Shared Mount的說明：http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation
