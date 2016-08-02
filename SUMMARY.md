@@ -7,7 +7,7 @@
    * [使用docker-compose安裝kubernetes](install-from-docker-compose.md)
    * [快速安裝K8S在GCE主機上](install-to-gce.md)
    * [使用hyperkube image安裝K8S](使用hyperkube-image安裝k8s.md)
-   * 安裝
+   * 安裝kubectl
 * [基本操作](basic-operation.md)
    * [建立nginx http server](run_nginx_http_server.md)
    * [建立一個具有 TLS 的 nginx 連線](secure_monolith.md)
