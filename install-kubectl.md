@@ -32,6 +32,8 @@ kubectl cluster-info
 
 ## 下載各平台已經complie好的套件
 
+下面是官方提供的各種不同平台的kubectl的下載位置
+
 * linux/amd64: http://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/linux/amd64/kubectl
 * linux/386: http://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/linux/386/kubectl
 * linux/arm: http://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/linux/arm/kubectl
@@ -41,6 +43,19 @@ kubectl cluster-info
 * OS X/386: http://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/darwin/386/kubectl
 * windows/amd64: http://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/windows/amd64/kubectl.exe
 * windows/386: http://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/windows/386/kubectl.exe
+
+以Linux為例，直接下載該位置的執行檔，並且存到/usr/bin下面，再賦予執行權限即可...
+
+```
+curl -sSL "https://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/linux/amd64/kubectl" > /usr/bin/kubectl
+chmod +x /usr/bin/kubectl
+```
+
+接著就可以測試看看拉～
+
+```
+kubectl cluster-info
+```
 
 ## 參考
 
