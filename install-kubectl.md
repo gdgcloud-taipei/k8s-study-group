@@ -57,6 +57,11 @@ chmod +x /usr/bin/kubectl
 kubectl cluster-info
 ```
 
+## 除了上述兩種安裝方式之外...
+
+如果是google cloud的用戶，在gcloud這個command line tool安裝好的時候，就會預設在環境中安裝kubectl，詳細安裝方式可以參考：https://cloud.google.com/sdk/?hl=en_US#download
+
+
 ## 參考
 
 * 官方網站 - 從release的tar執行：http://kubernetes.io/docs/user-guide/prereqs/
