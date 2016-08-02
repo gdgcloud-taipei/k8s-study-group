@@ -9,7 +9,25 @@
 kubectl run --image=nginx nginx-app --port=80 --env="DOMAIN=cluster"
 ```
 
-### 將服務掛載內部IP
+### 讓Nginx對外服務
+
+#### 在本地端使用
+
+在本地端(自己建置的K8S集群)，由於沒有像Load Balancer的服務，因此需要設定使用主機的IP來對外服務，透過deployment的expose的方式，可以綁定本地的IP讓外部可以存取...
+
+```
+kubectl expose deployment nginx --port=80 --target-port=80 --external-ip=10.240.0.9
+```
+
+其中10.240.0.9會是host主機的IP...
+
+
+#### 將服務掛載內部IP到GKE上
+
+在GKE上，因為GCP上有LoadBalancer的服務，因此可以比較快速的直接調用Load Balancer來對外服務，步驟如下:
+
+
+##### Expose服務
 
 ```
 kubectl expose deployment nginx-app --port=80 --name=nginx-http
@@ -27,7 +45,7 @@ nginx-http   10.99.255.30    <none>            80/TCP     1h
 curl http://10.99.255.30:80
 ```
 
-### 對服務掛載LoadBalancer (外部IP)
+##### 對服務掛載LoadBalancer (外部IP)
 
 ```
 kubectl expose deployment nginx-app --type="LoadBalancer"
