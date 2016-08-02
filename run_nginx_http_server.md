@@ -3,6 +3,11 @@
 
 ## Single Server Mode
 
+從單機版本來開始學習部署，這邊需要有兩個步驟：
+
+* 建立pod
+* 建立deployment並且expose服務
+
 ### 建立Nginx服務
 
 ```
