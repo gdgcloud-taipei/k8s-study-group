@@ -13,7 +13,7 @@ docker-machine create --driver google \
 您也可以透過指定 image 位置與硬碟大小來進一步設定您的環境
 
 ```
-docker-machine create --driver google \ 
+docker-machine create --driver google \
   --google-project $(YOUR_PROJECT) \
   --google-zone asia-east1-a \
   --google-machine-type f1-micro \
