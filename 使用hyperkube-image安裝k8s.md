@@ -4,17 +4,17 @@
 
 ```
 docker-machine create --driver google \
- --google-project $YOUR_PROJECT \
+ --google-project $(YOUR_PROJECT) \
  --google-zone asia-east1-a \
  --google-machine-type f1-micro \
  simon-docker
 ```
 
-您也可以透過指定image位置與硬碟大小來進一步設定您的環境
+您也可以透過指定 image 位置與硬碟大小來進一步設定您的環境
 
 ```
 docker-machine create --driver google \ 
-  --google-project $YOUR_PROJECT \
+  --google-project $(YOUR_PROJECT) \
   --google-zone asia-east1-a \
   --google-machine-type f1-micro \
   --google-disk-size 300 \
@@ -24,11 +24,11 @@ docker-machine create --driver google \
 
 ## 環境準備
 
-目前已經成功測試於docker-machine所建立的ubuntu 15.x環境，該環境為預載docker v1.12.0的系統。
+目前已經成功測試於 docker-machine 所建立的 ubuntu 15.x 環境，該環境為預載 docker v1.12.0 的系統。
 
 ### 先設定要安裝的K8S版本與環境參數
 
-下面指定要安裝stable的版本，並且為amd64的CPU Arch
+下面指定要安裝 stable 的版本，並且為 amd64 的 CPU Arch
 
 ```
 export K8S_VERSION=$(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
@@ -73,7 +73,7 @@ docker run -d \
  --allow-privileged --v=2
 ```
 
-啟動後，hyperkube會開始將k8s的服務帶起來，過不了多久，就可以完整地看到所有的服務以container的方式跑起來...
+啟動後， hyperkube 會開始將 k8s 的服務帶起來，過不了多久，就可以完整地看到所有的服務以 container 的方式跑起來...
 
 ```
 # docker ps
@@ -102,21 +102,21 @@ root@simon-docker1:~#
 
 ## 連線與使用
 
-首先，如果環境已經有對外網路，可以直接使用該對外網路的位置... 如果，未開放對外網路，可以透過反向代理來將遠端的port綁定到本機位置...
+首先，如果環境已經有對外網路，可以直接使用該對外網路的位置... 如果，未開放對外網路，可以透過反向代理來將遠端的 port 綁定到本機位置...
 
 ```
 docker-machine ssh `docker-machine active` -N -L 8080:localhost:8080
 ```
-如果綁定沒問題，只要透過curl即可測試
+如果綁定沒問題，只要透過 curl 即可測試
 
 ```
 curl localhost:8080
 ```
 
-只要看得到api結果，則代表設定無誤...
+只要看得到 api 結果，則代表設定無誤...
 
 
-接下來設定kubectl的環境，在此設定遠端群組為"test-doc"，其中set-cluster中的位置，可以依照自己的需求，可以改變成server的對外位置...
+接下來設定 kubectl 的環境，在此設定遠端群組為"test-doc"，其中set-cluster中的位置，可以依照自己的需求，可以改變成 server 的對外位置...
 
 ```
 kubectl config set-cluster test-doc --server=http://localhost:8080
@@ -124,11 +124,11 @@ kubectl config set-context test-doc --cluster=test-doc
 kubectl config use-context test-doc
 ```
 
-接下來就可以使用kubectl來建立自己的pods或其他服務了唷～
+接下來就可以使用 kubectl 來建立自己的pods或其他服務了唷～
 
 ## 清除環境
 
-如果剛剛用GCE建立環境的話，別忘記用完時候要清除資源... 
+如果剛剛用 GCE 建立環境的話，別忘記用完時候要清除資源... 
 
 ```
 $ docker-machine rm -f simon-docker
