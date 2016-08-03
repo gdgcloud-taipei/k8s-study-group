@@ -4,7 +4,7 @@
 
 ```
 docker-machine create --driver google \
- --google-project sunny-573 \
+ --google-project $YOUR_PROJECT \
  --google-zone asia-east1-a \
  --google-machine-type f1-micro \
  simon-docker
@@ -14,7 +14,7 @@ docker-machine create --driver google \
 
 ```
 docker-machine create --driver google \ 
-  --google-project sunny-573 \
+  --google-project $YOUR_PROJECT \
   --google-zone asia-east1-a \
   --google-machine-type f1-micro \
   --google-disk-size 300 \
