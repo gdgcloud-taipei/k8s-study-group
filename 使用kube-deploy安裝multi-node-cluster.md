@@ -1,6 +1,6 @@
 # 使用kube-deploy建立multi-node cluster
 
-這個專案(http://github.com/kubernetes/kube-deploy)大概是kubernetes的安裝上數一數二簡單的方式...  只要多玩幾次，應該可以很快上手唷～
+這個專案(http://github.com/kubernetes/kube-deploy) 大概是kubernetes的安裝上數一數二簡單的方式...  只要多玩幾次，應該可以很快上手唷～
 
 ## 建立主機
 
