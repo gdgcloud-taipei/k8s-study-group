@@ -74,7 +74,9 @@ cd9b2387c081        gcr.io/google_containers/hyperkube-amd64:v1.3.4   "/hyperkub
 ```
 
 
-## 安裝有問題 - not shared mount
+## 安裝有問題 
+
+### not shared mount
 
 如果遇到執行master.sh或slave.sh時候，有/var/lib/kubelet不是shared mount filesystem時候，可以透過下面方式解決
 
@@ -113,7 +115,7 @@ vi kube-deploy/docker-multinode/common.sh
   ...
 ```
 
-## 安裝有問題 - docker not start
+### docker not start
 
 可能是在某些環境的docker啟動時間不太一定，曾經在ubuntu與coreos上遇到最後docker run會有docker為執行的錯誤...後來透過在啟動前停止3秒鐘來避免找不到環境的問題...
 
@@ -137,3 +139,35 @@ kube::multinode::start_k8s_master() {
 
 ```
 
+## 服務重新啟動
+
+如果遇到k8s服務需要重新啟動的時候，如果要保留上面執行的服務... 需要在啟動時候注意一下別把/var/lib/kubelet的目錄清空了...
+
+
+```
+[root@simon-k8s-master docker-multinode]# ./master.sh
++++ [0811 10:37:04] K8S_VERSION is set to: v1.3.4
++++ [0811 10:37:04] ETCD_VERSION is set to: 2.2.5
++++ [0811 10:37:04] FLANNEL_VERSION is set to: 0.5.5
++++ [0811 10:37:04] FLANNEL_IPMASQ is set to: true
++++ [0811 10:37:04] FLANNEL_NETWORK is set to: 10.1.0.0/16
++++ [0811 10:37:04] FLANNEL_BACKEND is set to: udp
++++ [0811 10:37:04] RESTART_POLICY is set to: unless-stopped
++++ [0811 10:37:04] MASTER_IP is set to: localhost
++++ [0811 10:37:04] ARCH is set to: amd64
++++ [0811 10:37:04] IP_ADDRESS is set to: 10.240.0.9
++++ [0811 10:37:04] USE_CNI is set to: false
++++ [0811 10:37:04] --------------------------------------------
++++ [0811 10:37:04] Killing all kubernetes containers...
+dd34871b72fe
+8387d65e2963
+e7ac535047fa
+5e70475c9409
+b644a3a7c4b5
+711df2fabb08
+c0f45e19fa1b
+5d68320c8c2f
+cdc7e16bad99
+Do you want to clean /var/lib/kubelet? [Y/n] n
+...(skip)
+```
