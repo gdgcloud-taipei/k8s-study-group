@@ -6,11 +6,11 @@
 
 首先建立cluster用的主機，並安裝docker...(這邊不再贅述安裝過程)，目前測試過成功的安裝包括：
 
-* GCE CentOS7
-* GCE CoreOS stable
-* GCE Ubuntu 15
+* GCE CentOS7 (docker 1.12.0)
+* GCE CoreOS stable (docker 1.10)
+* GCE Ubuntu 15 (docker 1.12.0)
 
-其中CentOS7可以完全不修改的情況下照著流程跑完，其他的環境可以修改一小部分安裝腳本來跑完...
+以官方的說法，應該docker 1.10以上版本就可以安裝... 其中CentOS7可以完全不修改的情況下照著流程跑完，其他的環境可以修改一小部分安裝腳本來跑完...
 
 
 ## 安裝
