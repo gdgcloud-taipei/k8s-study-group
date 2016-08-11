@@ -171,3 +171,9 @@ cdc7e16bad99
 Do you want to clean /var/lib/kubelet? [Y/n] n
 ...(skip)
 ```
+
+## 參考
+
+* 關於shared mount: https://linux.cn/article-5057-5.html
+* 官方multi-node安裝說明文件：http://kubernetes.io/docs/user-guide/pods/multi-container/
+* Github: https://github.com/kubernetes/kube-deploy
