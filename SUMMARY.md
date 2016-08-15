@@ -14,4 +14,5 @@
    * [建立一個具有 TLS 的 nginx 連線](secure_monolith.md)
    * [使用YAML描述部署](deploy_using_yaml.md)
    * [探討Pod中有多個container之狀況](pod_contains_multi_container.md)
+   * 幫Pod增加Persistence Volume
 
