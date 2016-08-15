@@ -110,10 +110,10 @@ spec:
     * Always
     * Never
     * IfNotPresentDefaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated.
-  * ports[]: A list of ports to expose from the container. Cannot be updated.
-    * containerPort: The port number to expose on the pod’s IP address.
-    * name: The name for the port that can be referred to by services. Must be a DNS_LABEL and be unique without the pod.
-    * protocol: Protocol for the port. Must be UDP or TCP. Default is TCP.
+  * ports[]: container所要expose的port(s)，不可更改。
+    * containerPort: pod所要expose的port號。
+    * name: service所要對應到的port的名稱，必須是DNS_LABEL並且為唯一存在。
+    * protocol: 所要expose的port的協定，必須為TCP或UDP其中一個。預設為TCP。
   * resources: The Compute resources required by this container. Contains:
     * cpu: CPUs to reserve for each container. Default is whole CPUs; scale suffixes (e.g. 100m for one hundred milli-CPUs) are supported. If the host does not * have enough available resources, your pod will not be scheduled.
     * memory: Memory to reserve for each container. Default is bytes; binary scale suffixes (e.g. 100Mi for one hundred mebibytes) are supported. If the host * does not have enough available resources, your pod will not be scheduled.Cannot be updated.
