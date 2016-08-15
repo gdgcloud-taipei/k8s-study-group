@@ -16,5 +16,5 @@
    * [使用YAML描述部署](deploy_using_yaml.md)
    * [探討Pod中有多個container之狀況](pod_contains_multi_container.md)
    * [幫Pod增加Persistence Volume](add_persistence_volume.md)
-   * Pod設定
+   * Pod設定檔詳細說明
 
