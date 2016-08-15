@@ -120,6 +120,13 @@ spec:
     * cpu: 每個container所需要的佔有的CPU資源。預設為host上整個CPU資源都可以使用。預設的單位是m (e.g. 100m for one hundred milli-CPUs)。如果執行的host未有足夠的CPU資源執行，則該Pod將貴開不起來。
     * memory: 每個container所需要的佔有的記憶體資源。預設的單位是bytes (e.g. 100Mi for one hundred mebibytes)。如果執行的host未有足夠的CPU資源執行，則該Pod將貴開不起來。該設定無法更新。
 
+### restartPolicy
+
+Pod內部所有container重啟的策略，可使用的選項包括：
+* Always
+* OnFailure
+* Never
+
 
 ## 刪除測試資料
 
