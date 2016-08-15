@@ -61,6 +61,64 @@ kubectl run busybox \
 u@busybox$ wget -qO- http://$POD_IP
 ```
 
+## 設定詳細說明
+
+下面是yaml檔案設定的template，裡面有大致上常用的參數，設定上不妨可以參考這個template進行設定：
+
+```
+spec:
+  containers:
+    -
+      args:
+        - ""
+      command:
+        - ""
+      env:
+        -
+          name: ""
+          value: ""
+      image: ""
+      imagePullPolicy: ""
+      name: ""
+      ports:
+        -
+          containerPort: 0
+          name: ""
+          protocol: ""
+      resources:
+        cpu: ""
+        memory: ""
+  restartPolicy: ""
+  volumes:
+    -
+      emptyDir:
+        medium: ""
+      name: ""
+      secret:
+        secretName: ""
+```
+
+* name: container的名稱，必須符合dns設定原則，並且不可重複
+* image: docker image名稱
+* containers物件中包含:
+  * command[]: container啟動時候的entrypoint array，如果未指定，將會使用container image內所設定的預設entrypoint為主。本項設定無法更改。
+  * args[]: container內部使用的command array包含給entrypoint使用的參數。如未指定，將使用container image裡面內建的cmd參數內容取代，此項設定也不允許變動。
+  * env[]: 使用key:value格式設定的字串，將會作為container啟動後的環境變數，無法在事後更新。
+    * name: The name of the environment variable; must be a C_IDENTIFIER.
+    * value: The value of the environment variable. Defaults to empty string.
+  * imagePullPolicy: The image pull policy. Accepted values are:
+    * Always
+    * Never
+* IfNotPresentDefaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated.
+  * ports[]: A list of ports to expose from the container. Cannot be updated.
+    * containerPort: The port number to expose on the pod’s IP address.
+    * name: The name for the port that can be referred to by services. Must be a DNS_LABEL and be unique without the pod.
+    * protocol: Protocol for the port. Must be UDP or TCP. Default is TCP.
+  * resources: The Compute resources required by this container. Contains:
+    * cpu: CPUs to reserve for each container. Default is whole CPUs; scale suffixes (e.g. 100m for one hundred milli-CPUs) are supported. If the host does not * have enough available resources, your pod will not be scheduled.
+    * memory: Memory to reserve for each container. Default is bytes; binary scale suffixes (e.g. 100Mi for one hundred mebibytes) are supported. If the host * does not have enough available resources, your pod will not be scheduled.Cannot be updated.
+
+
 ## 刪除測試資料
 
 刪除所建立的nginx pod與service
@@ -70,3 +128,6 @@ kubectl delete pod nginx
 kubectl delete service nginx
 ```
 
+## 參考
+
+* 官方K8S設定檔說明：http://kubernetes.io/docs/user-guide/pods/multi-container/#containers
