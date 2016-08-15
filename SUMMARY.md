@@ -13,7 +13,7 @@
    * [查詢kubectl的資源](kubectl_get_xxx.md)
    * [建立nginx http server](run_nginx_http_server.md)
    * [建立一個具有 TLS 的 nginx 連線](secure_monolith.md)
-   * [使用YAML描述部署](deploy_using_yaml.md)
+   * [使用YAML描述部署Pod](deploy_using_yaml.md)
    * [Pod設定檔詳細說明](pod_config_detail_description.md)
    * [探討Pod中有多個container之狀況](pod_contains_multi_container.md)
    * [幫Pod增加Persistence Volume](add_persistence_volume.md)
