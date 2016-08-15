@@ -54,7 +54,8 @@ spec:
 
 ## 掛載host位置
 
-除了直接使用空的位置之外，
+除了直接使用空的位置之外，k8s也支援使用local folder的方式來讓container掛載，透過hostPath的方式來設定即可...
+
 ```
 apiVersion: v1
 kind: Pod
