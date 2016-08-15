@@ -127,7 +127,16 @@ Pod內部所有container重啟的策略，可使用的選項包括：
 * OnFailure
 * Never
 
+### volumes[]
 
+Pod中可以掛載的volume位置(以陣列方式存在)，必須指定給每個掛載的volume一個空間與名稱，且該volume可以使用volumeMount的方式附加在有設定該名稱的container下。volume可以用的型態包含：
+
+* emptyDir: pod生命週期中可以分享的一個暫存的空間，包含:
+  * medium: volume的儲存媒介形態，預設必須是個空的資串，或是"Memory"。
+* hostPath: 一個事先存在的host檔案或是資料夾。通常使用在需要跟系統緊密結合且需要權限的系統daemon或是agent。需設定的內容包含:
+  * path: The path of the directory on the host.
+* secret: Secret to populate volume. Secrets are used to hold sensitive information, such as passwords, OAuth tokens, and SSH keys. Learn more from the docs on secrets. Contains:
+  * secretName: The name of a secret in the pod’s namespace.
 ## 刪除測試資料
 
 刪除所建立的nginx pod與service
