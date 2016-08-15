@@ -134,9 +134,11 @@ Pod中可以掛載的volume位置(以陣列方式存在)，必須指定給每個
 * emptyDir: pod生命週期中可以分享的一個暫存的空間，包含:
   * medium: volume的儲存媒介形態，預設必須是個空的資串，或是"Memory"。
 * hostPath: 一個事先存在的host檔案或是資料夾。通常使用在需要跟系統緊密結合且需要權限的系統daemon或是agent。需設定的內容包含:
-  * path: The path of the directory on the host.
-* secret: Secret to populate volume. Secrets are used to hold sensitive information, such as passwords, OAuth tokens, and SSH keys. Learn more from the docs on secrets. Contains:
-  * secretName: The name of a secret in the pod’s namespace.
+  * path: host上的已經存在的路徑。
+* secret: 一個具備隱私內容的volume，可以用來保存敏感性資料如密碼、token或是ssh金鑰等資訊。這部分需要設定的資訊包含:
+  * secretName: pod namespace下的secret名稱
+
+
 ## 刪除測試資料
 
 刪除所建立的nginx pod與service
