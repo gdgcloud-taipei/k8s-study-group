@@ -10,10 +10,10 @@
    * [使用kube-deploy安裝multi-node cluster](使用kube-deploy安裝multi-node-cluster.md)
    * [安裝kubectl](install-kubectl.md)
 * [基本操作](basic-operation.md)
+   * kubectl的資源
    * [建立nginx http server](run_nginx_http_server.md)
    * [建立一個具有 TLS 的 nginx 連線](secure_monolith.md)
    * [使用YAML描述部署](deploy_using_yaml.md)
    * [探討Pod中有多個container之狀況](pod_contains_multi_container.md)
    * [幫Pod增加Persistence Volume](add_persistence_volume.md)
-   * kubectl的資源
 
