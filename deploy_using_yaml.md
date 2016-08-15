@@ -116,8 +116,7 @@ spec:
     * protocol: 所要expose的port的協定，必須為TCP或UDP其中一個。預設為TCP。
   * resources: container所需要的運算資源限制...，包含:
     * cpu: 每個container所需要的佔有的CPU資源。預設為host上整個CPU資源都可以使用。預設的單位是m (e.g. 100m for one hundred milli-CPUs)。如果執行的host未有足夠的CPU資源執行，則該Pod將貴開不起來。
-    * memory: 每個container所需要的佔有的記憶體資源。預設的單位是bytes (e.g. 100Mi for one hundred mebibytes)。如果執行的host未有足夠的CPU資源執行，則該Pod將貴開不起來。
-Memory to reserve for each container. Default is bytes; binary scale suffixes (e.g. 100Mi for one hundred mebibytes) are supported. If the host * does not have enough available resources, your pod will not be scheduled.Cannot be updated.
+    * memory: 每個container所需要的佔有的記憶體資源。預設的單位是bytes (e.g. 100Mi for one hundred mebibytes)。如果執行的host未有足夠的CPU資源執行，則該Pod將貴開不起來。該設定無法更新。
 
 
 ## 刪除測試資料
