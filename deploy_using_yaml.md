@@ -109,7 +109,7 @@ spec:
   * imagePullPolicy: image啟動的原則，可以接受下面兩種值:
     * Always
     * Never
-* IfNotPresentDefaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated.
+    * IfNotPresentDefaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated.
   * ports[]: A list of ports to expose from the container. Cannot be updated.
     * containerPort: The port number to expose on the pod’s IP address.
     * name: The name for the port that can be referred to by services. Must be a DNS_LABEL and be unique without the pod.
