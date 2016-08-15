@@ -104,8 +104,8 @@ spec:
   * command[]: container啟動時候的entrypoint array，如果未指定，將會使用container image內所設定的預設entrypoint為主。本項設定無法更改。
   * args[]: container內部使用的command array包含給entrypoint使用的參數。如未指定，將使用container image裡面內建的cmd參數內容取代，此項設定也不允許變動。
   * env[]: 使用key:value格式設定的字串，將會作為container啟動後的環境變數，無法在事後更新。
-    * name: container起動後的環境變數，需要符合C_IDENTIFIER的規範。
-    * value: The value of the environment variable. Defaults to empty string.
+    * name: container起動後的環境變數名稱，需要符合C_IDENTIFIER的規範。
+    * value: container啟動後的環境變數值。
   * imagePullPolicy: The image pull policy. Accepted values are:
     * Always
     * Never
