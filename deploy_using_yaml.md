@@ -106,7 +106,7 @@ spec:
   * env[]: 使用key:value格式設定的字串，將會作為container啟動後的環境變數，無法在事後更新。
     * name: container起動後的環境變數名稱，需要符合C_IDENTIFIER的規範。
     * value: container啟動後的環境變數值。
-  * imagePullPolicy: The image pull policy. Accepted values are:
+  * imagePullPolicy: image啟動的原則，可以接受下面兩種值:
     * Always
     * Never
 * IfNotPresentDefaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated.
