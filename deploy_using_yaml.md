@@ -98,6 +98,8 @@ spec:
         secretName: ""
 ```
 
+### containers[]
+
 * name: container的名稱，必須符合dns設定原則，並且不可重複
 * image: docker image名稱
 * containers物件中包含:
