@@ -22,7 +22,7 @@
 ```
 git clone https://github.com/kubernetes/kube-deploy
 cd kube-deploy/docker-multinode
-./master.sh
+sudo bash ./master.sh
 ```
 
 ### 安裝worker
@@ -33,7 +33,7 @@ cd kube-deploy/docker-multinode
 git clone https://github.com/kubernetes/kube-deploy
 cd kube-deploy/docker-multinode
 export MASTER_IP=[master_ip]
-./worker.sh
+sudo bash ./worker.sh
 ```
 
 ### 檢查
