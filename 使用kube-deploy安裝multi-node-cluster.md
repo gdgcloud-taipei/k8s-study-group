@@ -17,23 +17,23 @@
 
 ### 安裝master
 
-進到master主機，執行下面指令
+進到master主機，執行下面指令 ( 確認是 root 權限 )
 
 ```
 git clone https://github.com/kubernetes/kube-deploy
 cd kube-deploy/docker-multinode
-sudo bash ./master.sh
+bash ./master.sh
 ```
 
 ### 安裝worker
 
-進到worker主機，執行下面指令
+進到worker主機，執行下面指令 ( 確認是 root 權限 )
 
 ```
 git clone https://github.com/kubernetes/kube-deploy
 cd kube-deploy/docker-multinode
 export MASTER_IP=[master_ip]
-sudo bash ./worker.sh
+bash ./worker.sh
 ```
 
 ### 檢查
