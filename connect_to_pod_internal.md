@@ -19,3 +19,11 @@ secret-test-pod   1/1       Running   0          6m
 
 接下來就可以執行需要的指令了...
 
+如果您的Pod是有兩個以上container的組成，可以透過-c帶入container name(設定在yaml裡面的名稱)來連線：
+
+```
+# kubectl exec -it mypod -c ap bash
+```
+
+如果未指定，則會以yaml file中第一個container為主要container連入...
+
