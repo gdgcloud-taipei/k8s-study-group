@@ -17,5 +17,5 @@
    * [Pod設定檔詳細說明](pod_config_detail_description.md)
    * [探討Pod中有多個container之狀況](pod_contains_multi_container.md)
    * [幫Pod增加Persistence Volume](add_persistence_volume.md)
-   * 使用secret
+   * [使用secret](using_secret.md)
 
