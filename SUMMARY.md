@@ -19,4 +19,5 @@
    * [幫Pod增加Persistence Volume](add_persistence_volume.md)
    * [查詢log](check_pod_log.md)
    * [使用secret](using_secret.md)
+   * 連線到Pod檢視內部
 
