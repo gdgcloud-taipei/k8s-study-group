@@ -74,5 +74,8 @@ nginx-app    10.99.249.119   130.211.254.181   80/TCP     2m
 curl http://130.211.254.181:80
 ```
 
+或是透過reverse ssh將server port與本地端port串通
 
+```
 ssh peihsinsu@104.155.210.209 -A -p 22 -L 15984:localhost:5984
+```
