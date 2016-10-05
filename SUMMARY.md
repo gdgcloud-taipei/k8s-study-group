@@ -9,6 +9,7 @@
    * [使用hyperkube image安裝K8S](使用hyperkube-image安裝k8s.md)
    * [使用kube-deploy安裝multi-node cluster](使用kube-deploy安裝multi-node-cluster.md)
    * [安裝kubectl](install-kubectl.md)
+   * 使用 kubeadm 來建立 Kubernetes Cluster
 * [基本操作](basic-operation.md)
    * [查詢kubectl的資源](kubectl_get_xxx.md)
    * [建立nginx http server](run_nginx_http_server.md)
