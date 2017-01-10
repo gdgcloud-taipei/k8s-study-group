@@ -87,5 +87,15 @@ deploy/iot-redis     1         1         1            1           57m
 deploy/iot-server    3         3         3            3           11m
 ```
 
+### 透過show-label檢視node上的label
+
+k8s在node上可以附加一些label資訊，透過這些資訊可以讓selector在部屬的時候來做選用不同的node進行服務部署，想檢視node上的label，可以透過--show-labels來看：
+
+```
+# kubectl get node --show-labels
+NAME         STATUS         AGE       LABELS
+k8s-master   Ready,master   14m       beta.kubernetes.io/arch=arm,beta.kubernetes.io/os=linux,kubeadm.alpha.kubernetes.io/role=master,kubernetes.io/hostname=k8s-master
+root@k8s-master:~#
+```
 
 
