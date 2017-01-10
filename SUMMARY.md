@@ -21,6 +21,7 @@
     * [查詢log](check_pod_log.md)
     * [連線到Pod檢視內部](connect_to_pod_internal.md)
     * [使用secret功能](using_secret.md)
+    * [Scale out你的Pod](scale-out你的pod.md)
 * K8S套件管理工具
     * [helm](helm.md)
 
