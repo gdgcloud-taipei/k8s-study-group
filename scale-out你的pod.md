@@ -1,4 +1,4 @@
-# Scale out你的Pod
+# Scale out你的服務
 
 在K8S上的scale out還滿簡單的，通常可以scale out的單位是用Deployment包裝起來的Pod，下面是個scale out的範例：
 
