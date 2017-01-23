@@ -24,7 +24,7 @@
     * [Scale out你的Pod](scale-out你的pod.md)
     * [使用Deployment部署](use_deployment.md)
     * [使用Service為服務增加外部IP](use_service_as_external_access_point.md)
-
+    * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
 * K8S套件管理工具
     * [helm](helm.md)
 
