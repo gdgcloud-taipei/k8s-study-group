@@ -29,6 +29,12 @@ spec:
           value: dns
 ```
 
+我們將文件儲存為deploy.yaml，則部署上只要透過下面即可部署：
+
+```
+kubectl create -f deploy.yaml
+```
+
 ## 參考
 
 * K8S deployment doc: https://kubernetes.io/docs/resources-reference/v1.5/#deployment-v1beta1
