@@ -28,3 +28,7 @@ spec:
         - name: GET_HOSTS_FROM
           value: dns
 ```
+
+## 參考
+
+* K8S deployment doc: https://kubernetes.io/docs/resources-reference/v1.5/#deployment-v1beta1
