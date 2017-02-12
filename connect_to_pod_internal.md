@@ -33,3 +33,4 @@ secret-test-pod   1/1       Running   0          6m
 # kubectl exec -it mypod -c ap env
 ```
 
+上面的執行則會直接執行"env"指令，並直接返回結果後結束該執行階段。
