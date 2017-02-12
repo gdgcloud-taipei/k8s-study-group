@@ -27,3 +27,9 @@ secret-test-pod   1/1       Running   0          6m
 
 如果未指定，則會以yaml file中第一個container為主要container連入...
 
+另外，如果不需要執行互動的shell，也可以透過最後的指令部分置換成需要執行的令來執行...
+
+```
+# kubectl exec -it mypod -c ap env
+```
+
