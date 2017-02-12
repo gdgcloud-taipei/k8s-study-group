@@ -49,7 +49,7 @@ Log在服務跑了一段時間後，可能會累積不少的Log資料，此時�
 最後，如果您使用kubectl get一個以上的項目時候，會發現在顯示的名稱部分，會加上"[type]/"的標示，讓我們知道這個項目是屬於pod[po], service[svc], deployment[deploy]... 等等
 
 ```
-kubectl get pods,svc,deploy,ingress
+# kubectl get pods,svc,deploy,ingress
 NAME                                 READY     STATUS    RESTARTS   AGE
 po/iot-couchdb-3045641908-vep3i      1/1       Running   0          1d
 po/iot-redis-235782042-s3lru         1/1       Running   1          42d
