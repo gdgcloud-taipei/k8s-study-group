@@ -1,0 +1,4 @@
+# 進階操作
+
+Kubernetes支援透過指令直接啟動container，也支援透過yaml或json描述檔來啟動整套container服務，讓container orchectration可以更簡單的描述在檔案中，讓每一次的"Immutiable"部署都可以輕鬆簡單。
+
