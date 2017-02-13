@@ -43,3 +43,5 @@ spec:
           ports:
           - containerPort: 80
 ```
+
+將上面設定檔案存成"deploy.yaml"後，透過kubectl create即可將服務建立起來...
