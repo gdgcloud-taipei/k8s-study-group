@@ -47,6 +47,7 @@ NAME                 DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 deploy/iot-couchdb   1         1         1            1           58m
 deploy/iot-server    3         3         3            3           11m
 ```
+承上操作，iot-server本身為透過deploy的方式封裝，因此在scale時，是直接針對該deploy的replica數量擴增，且deploy前面有service作為服務入口，因此整個服務在擴展成3台後，可以直接由這三台iot-server平均乘載外部的request...
 
 ## Reference
 
