@@ -51,6 +51,8 @@ deploy/iot-server    3         3         3            3           11m
 ```
 承上操作，iot-server本身為透過deploy的方式封裝，因此在scale時，是直接針對該deploy的replica數量擴增，且deploy前面有service作為服務入口，因此整個服務在擴展成3台後，可以直接由這三台iot-server平均乘載外部的request...
 
+如了手動scale out呢的福物外，新版的K8S也開始支援Auto Scale了喔，這部分容後跟大家介紹。
+
 ## Reference
 
 * http://kubernetes.io/docs/user-guide/kubectl/kubectl_scale/
