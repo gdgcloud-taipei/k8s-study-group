@@ -24,7 +24,7 @@ deploy/iot-redis     1         1         1            1           57m
 deploy/iot-server    1         1         1            1           11m
 ```
 
-假設我們希望iot-server可以scale到3台... 可以這樣操作：
+上面狀態所顯示，iot-server (po/iot-server-2844449461-7ljj4)在pod上的數量為一台，假設我們希望iot-server可以scale到3台... 可以這樣操作：
 
 ```
 # kubectl scale --replicas=3 deploy/iot-server
