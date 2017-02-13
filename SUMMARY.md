@@ -23,11 +23,10 @@
   * [連線到Pod檢視內部](connect_to_pod_internal.md)
   * [使用secret功能](using_secret.md)
   * [使用Deployment部署](use_deployment.md)
+  * [一個完整的Web服務部署](web.md)
   * [Scale out你的服務](scale-out你的pod.md)
   * [使用Service為服務增加外部IP](use_service_as_external_access_point.md)
   * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
 * K8S套件管理工具
   * [helm](helm.md)
-
-
 
