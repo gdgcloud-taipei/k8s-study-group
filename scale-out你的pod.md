@@ -1,5 +1,7 @@
 # Scale out你的服務
 
+Scale out的概念是當您的服務器資源無法應付連線數量或是運算量時候，維運人員會透過橫向擴展應用程式伺服器(AP Server)的數量來提高機器的可乘載數，讓服務得以繼續經營...
+
 在K8S上的scale out還滿簡單的，通常可以scale out的單位是用Deployment包裝起來的Pod，下面是個scale out的範例：
 
 ```
