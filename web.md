@@ -54,4 +54,6 @@ spec:
 * 下半段為描述Deployment元素，其中該deploy包含一個container，並且以80 port對外服務
 * 上半段為將Deployment以Service的形式公開對外服務(public)，且開啟80 port對應內部deployment的80 port提供服務。
 
+透過這樣的部屬方式，提供了未來有需要時後可以直接scale out您的AP Server來乘載更大量request的優點，如下圖所示：
+
 ![Scaleout](/assets/scaleout.png)
