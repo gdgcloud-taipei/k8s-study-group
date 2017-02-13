@@ -1,4 +1,13 @@
+# 使用Service為服務增加外部IP
 
+服務的提供大部分是需要有個對外的IP位置，在K8S中，是透過Service這個元件來提供對外存取的入口點，在前面介紹過使用"kubectl"來建立Service
+
+```
+# kubectl run --image=nginx nginx-app --port=80 --env="DOMAIN=cluster"
+# kubectl expose nginx-app --type=LoadBalancer
+```
+
+這邊也可以透過yaml檔案來描述
 
 ```
 apiVersion: v1
