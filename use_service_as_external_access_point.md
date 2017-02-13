@@ -4,58 +4,42 @@
 
 ```
 # kubectl run --image=nginx nginx-app --port=80 --env="DOMAIN=cluster"
-# kubectl expose nginx-app --type=LoadBalancer
+# kubectl expose deployment nginx-app --port=80 --name=nginx-http
 ```
 
-這邊也可以透過yaml檔案來描述
+在有了yaml描述黨後，我們也可以透過yaml檔案來描述deploy跟service:
 
 ```
 apiVersion: v1
 kind: Service
 metadata:
-  name: iot-couchdb
+  name: nginx-app
   labels:
-    app: couchdb
-    tier: iot-couchdb
-
+    app: nginx-app
+    tier: nginx-app
 spec:
   ports:
-  - port: 5984
-    targetPort: 5984
+  - port: 80
+    targetPort: 80
   selector:
-    app: couchdb
-    tier: iot-couchdb
+    app: nginx-app
+    tier: nginx-app
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: iot-couchdb
+  name: nginx-app
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: couchdb
-        tier: iot-couchdb
+        app: nginx-app
+        tier: nginx-app
     spec:
       containers:
-        - name: couchdb
-          image: couchdb
+        - name: nginx-app
+          image: nginx-app
           ports:
-          - containerPort: 5984
-          env:
-          - name: COUCHDB_USER
-            value: admin
-          - name: COUCHDB_PASSWORD
-            value: 1234qwer
-          - name: GET_HOSTS_FROM
-            value: dns
-          volumeMounts:
-          - name: db-storage
-            mountPath: /usr/local/var/lib/couchdb
-      volumes:
-        - name: db-storage
-          gcePersistentDisk:
-            pdName: disk-iot-data
-            fsType: ext4
+          - containerPort: 80
 ```
