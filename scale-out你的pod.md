@@ -2,6 +2,8 @@
 
 Scale out的概念是當您的服務器資源無法應付連線數量或是運算量時候，維運人員會透過橫向擴展應用程式伺服器(AP Server)的數量來提高機器的可乘載數，讓服務得以繼續經營...
 
+![Scaleout](/assets/scenario-iot-server.png)
+
 在K8S上的scale out還滿簡單的，通常可以scale out的單位是用Deployment包裝起來的Pod，下面是個簡單的scale out的範例，包含兩個deployment(iot-server與iot-couchdb)，其中個包含一個running pod，運作狀態如下：
 
 ```
