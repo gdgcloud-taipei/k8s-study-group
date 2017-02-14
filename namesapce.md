@@ -32,6 +32,16 @@ or
 kubectl get namespace
 ```
 
+一般列表會顯示結果大略如下：
+
+```
+kubectl get ns
+NAME          STATUS    AGE
+default       Active    49d
+kube-system   Active    49d
+myweb         Active    9m
+```
+
 
 ```
 apiVersion: v1
