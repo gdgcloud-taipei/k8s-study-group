@@ -42,6 +42,7 @@ kube-system   Active    49d
 myweb         Active    9m
 ```
 
+如果希望deploy透過yaml
 
 ```
 apiVersion: v1
