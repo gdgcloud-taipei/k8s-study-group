@@ -64,3 +64,53 @@ ex:
 ```
 kubectl create -f myweb-ns.yaml
 ```
+
+## 當namespace建置好後呢...
+
+當namespace建好，可以透過get來查詢(kubectl get ns)，那如果要deploy服務到該namespace下面，可以透過指令或描述檔中描述來進行...
+
+例如有一包deploy.yaml要部署到myweb這個namesapce下面，則可以透過指令：
+
+```
+kubectl create -f deploy.yaml --namespace myweb
+```
+
+如果希望使用yaml描述檔來記錄，則可以在metadata中指定namesapce，範例如下：
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-redis
+  namespace: myweb
+  labels:
+    app: redis
+    tier: myweb
+spec:
+  ports:
+    # the port that this service should serve on
+  - port: 6379
+    targetPort: 6379
+  selector:
+    app: redis
+    tier: myweb
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: my-redis
+  namespace: myweb
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        tier: myweb
+    spec:
+      containers:
+        - name: redis
+          image: redis
+          ports:
+          - containerPort: 6379
+```
