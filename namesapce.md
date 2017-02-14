@@ -114,3 +114,5 @@ spec:
           ports:
           - containerPort: 6379
 ```
+
+其中，namespace需要記錄在deploy與service的metadata中唷～
