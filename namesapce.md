@@ -6,6 +6,33 @@
 2. 不同的namespace的pod彼此之間無法內部連線，換句話說，不同namespace間是彼此隔離，不會危害到其他的namespace下的服務。
 3. 當服務大量部署時，沒有namespace隔開，連列表都有點難找到自己要看的服務...@@
 
+## 建立namespace
+
+一次性的做法可以透過下面指令建立namespace
+
+```
+kubectl create namespace [namespace name]
+```
+
+ex:
+
+```
+# kubectl create namespace myweb
+```
+
+列表目前cluster下的namespace
+
+```
+kubectl get ns
+```
+
+or 
+
+```
+kubectl get namespace
+```
+
+
 ```
 apiVersion: v1
 kind: Namespace
