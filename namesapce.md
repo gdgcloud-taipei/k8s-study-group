@@ -52,3 +52,15 @@ metadata:
   labels:
     name: myweb
 ```
+
+建立部分一樣透過kubectl create來建置：
+
+```
+kubectl create -f [yaml file uri]
+```
+
+ex:
+
+```
+kubectl create -f myweb-ns.yaml
+```
