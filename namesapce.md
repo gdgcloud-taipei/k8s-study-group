@@ -42,7 +42,7 @@ kube-system   Active    49d
 myweb         Active    9m
 ```
 
-如果希望deploy透過yaml
+如果希望deploy透過yaml部署，可以用下面的yaml檔來描述namespace資訊：
 
 ```
 apiVersion: v1
