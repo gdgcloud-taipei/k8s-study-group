@@ -90,4 +90,4 @@ Ex:
 # kubectl set image deploy/myweb myweb=peihsinsu/simpleweb:v2
 ```
 
-如果一切無誤，則會看到新的instance啟動中，且現有的instance在關閉中...
+如果一切無誤，則會看到新的instance啟動中，且現有的instance在關閉中... 慢慢的版本就會完全被置換完 :D
