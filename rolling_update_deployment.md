@@ -2,6 +2,8 @@
 
 在K8S的特色中，以rolling update這個feature最吸引我，但是rolling update偏偏只能用在replication controller中，而目前官方建議以deployment的部屬方式來取代replication controller，言下之意也就是deployment有可以取代replication controller的方式...
 
+下面是一個簡單的部屬檔，包含一個deployment、一個service、一個ingress配置，其中service設定了sessionAffinity，且ingress設定了靜態IP位置...
+
 ```
 apiVersion: v1
 kind: Service
