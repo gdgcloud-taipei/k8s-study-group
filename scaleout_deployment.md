@@ -1,0 +1,32 @@
+# 在Deployment部署下Scaleout
+
+Deployment部署完成後，通常維運人員需要依據Pod的狀態來做適當的instance數量調整... 下面是個簡單的Deployment檔案，其中replicas預設為1個instance。
+
+```
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myweb
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myweb
+        tier: myweb
+    spec:
+      containers:
+      - name: myweb
+        image: peihsinsu/simpleweb
+        ports:
+        - containerPort: 80
+        env:
+        - name: PORT
+          value: "80"
+        - name: GET_HOSTS_FROM
+          value: dns
+```
+
+```
+# kubectl scale --replicas=1 deploy/myweb
+```
