@@ -36,5 +36,7 @@ spec:
 部署好之後，應該會看到該deployment會有一個instance...，此時可以透過kubectl scale來重新設定replica數量：
 
 ```
-# kubectl scale --replicas=1 deploy/myweb
+# kubectl scale --replicas=3 deploy/myweb
 ```
+
+如果此時要做scale in，則可以直接將replica數量設小，instance會砍掉多餘的，留下足夠的replica來服務...
