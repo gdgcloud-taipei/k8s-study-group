@@ -27,6 +27,14 @@ spec:
           value: dns
 ```
 
+接下來我們可以部署這個設定檔(將上面設定檔儲存為: myweb.yaml)
+
+```
+# kubectl create -f myweb.yaml
+```
+
+部署好之後，應該會看到該deployment會有一個instance...，此時可以透過kubectl scale來重新設定replica數量：
+
 ```
 # kubectl scale --replicas=1 deploy/myweb
 ```
