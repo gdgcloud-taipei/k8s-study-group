@@ -28,6 +28,7 @@
   * [一個完整的Web服務部署](web.md)
   * [從Deployment更新Image版本](rolling_update_deployment.md)
   * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
+  * [檢視資源使用狀態](.md)
 * K8S套件管理工具
   * [helm](helm.md)
 
