@@ -2,7 +2,7 @@
 
 Kubernetes是由Google所開源的一套Container Cluster系統，可以兼容於docker與rkt等container系統，提供一套跨雲的Container解決方案。透過Kubernetes，讓使用者可以輕鬆建置自己的雲端orchestration，並且可以遨遊在公有雲、私有雲以及自建的本地端環境中，而不用擔心被雲服務不同的API所限制。
 
-##作者簡介：
+## 作者簡介：
 
 ### GCPUG.TW
 
