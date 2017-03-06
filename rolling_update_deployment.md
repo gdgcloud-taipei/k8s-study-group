@@ -94,7 +94,7 @@ Ex:
 
 ## 補充
 
-如果在未指定image version的情況下，透過下面指令可以直接要求k8s重新更新image
+如果在未指定image version的情況下，透過下面指令可以直接要求k8s重新部署image，但由於tag部分未有異動，因此實際無法更新image
 
 ```
 # kubectl set image deploy/myweb myweb=peihsinsu/simpleweb
