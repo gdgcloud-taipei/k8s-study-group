@@ -96,7 +96,6 @@ Ex:
 
 如果在未指定image version的情況下，透過下面指令可以直接要求k8s重新更新image
 
-
 ```
 # kubectl set image deploy/myweb myweb=peihsinsu/simpleweb
 ```
