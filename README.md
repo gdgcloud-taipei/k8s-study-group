@@ -2,7 +2,7 @@
 
 Kubernetes是由Google所開源的一套Container Cluster系統，可以兼容於docker與rkt等container系統，提供一套跨雲的Container解決方案。透過Kubernetes，讓使用者可以輕鬆建置自己的雲端orchestration，並且可以遨遊在公有雲、私有雲以及自建的本地端環境中，而不用擔心被雲服務不同的API所限制。
 
-##作者簡介：
+## 作者簡介：
 
 ### GCPUG.TW
 
@@ -12,4 +12,5 @@ GCPUG透過網際網路串聯喜好Google Cloud的使用者，分享與交流使
 
 ### Simon Su
 
-目前為GCPUG.TW co-organizer，為Google Cloud APAC地區Certificated Trainer以及[Google Cloud Platform Developer Experet](https://developers.google.com/experts/people/peihsin-su)。主要技術以後端底層為主，喜好分享與學習新東西。
+目前為GCPUG.TW co-organizer，為Google Cloud APAC地區Certificated Trainer以及[Google Cloud Platform Developer Expert](https://developers.google.com/experts/people/peihsin-su)。主要技術以後端底層為主，喜好分享與學習新東西。
+
