@@ -1,6 +1,5 @@
 # 單機版K8S - minikube
 
-
 kubernetes.io發佈了一個供本地端單機跑kubernetes最精簡的環境minikube，透過minikube可以很快速的使用與測試k8s的功能唷～
 
 ## 安裝minikube
@@ -10,7 +9,6 @@ kubernetes.io發佈了一個供本地端單機跑kubernetes最精簡的環境min
 ```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.6.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```
-
 
 其他的操作部分都是使用kubectl，可以參考kubernetes的指令...
 
@@ -49,7 +47,7 @@ The following Kubernetes versions are available:
 minikube dashboard
 ```
 
-此時，桌面會跳出browser的畫面，裡面是kubernetes的dashboard，這版本的dashboard已經提供了直接在網頁介面Deploy App的功能，除此之外，也可以透過yaml來作部署的動作... 
+此時，桌面會跳出browser的畫面，裡面是kubernetes的dashboard，這版本的dashboard已經提供了直接在網頁介面Deploy App的功能，除此之外，也可以透過yaml來作部署的動作...
 
 ![minikube dashboard](assets/minikube-dashboard.png)
 
@@ -65,7 +63,6 @@ export DOCKER_CERT_PATH=/Users/peihsinsu/.minikube/certs
 # Run this command to configure your shell:
 # eval $(minikube docker-env)
 ```
-
 
 ### 關閉與重新啟動
 
@@ -93,9 +90,7 @@ Kubernetes is available at https://192.168.99.100:8443.
 Kubectl is now configured to use the cluster.
 ```
 
-
 ### ssh連線到minikube虛擬主機中
-
 
 要連線到minikube主機時，可以透過minikube ssh的指令...
 
@@ -103,8 +98,8 @@ Kubectl is now configured to use the cluster.
 
 ## 參考文件
 
-* minikube readme: https://github.com/kubernetes/minikube/blob/master/README.md
-* minikube release note: https://github.com/kubernetes/minikube/releases
+* minikube readme: [https://github.com/kubernetes/minikube/blob/master/README.md](https://github.com/kubernetes/minikube/blob/master/README.md)
+* minikube release note: [https://github.com/kubernetes/minikube/releases](https://github.com/kubernetes/minikube/releases)
 
 
 
