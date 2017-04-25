@@ -14,6 +14,20 @@ c2ltb25zdQ==
 c2ltb25zdS5tYWlsQGdtYWlsLmNvbQ==
 ```
 
+如果要把檔案整個加密，也可以用上述方式...
+
+```
+cat key.json | base64
+```
+
+但是當檔案比較常時候，會有斷行情況發生，因此可以透過"-w 0"來去除斷行...
+
+```
+cat key.json | base64 -w 0
+```
+
+
+
 ### Secret yaml文件
 
 [file: secret.yaml]
