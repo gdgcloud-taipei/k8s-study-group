@@ -14,6 +14,7 @@
   * [查詢kubectl的資源](kubectl_get_xxx.md)
   * [建立nginx http server](run_nginx_http_server.md)
   * [建立一個具有 TLS 的 nginx 連線](secure_monolith.md)
+  * [K8S的部屬結構](k8sde-bu-shu-jie-gou.md)
 * [進階操作](advance-operation.md)
   * [使用YAML描述部署Pod](deploy_using_yaml.md)
   * [Pod設定檔詳細說明](pod_config_detail_description.md)
