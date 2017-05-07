@@ -21,14 +21,19 @@
   * [幫Pod增加Persistence Volume](add_persistence_volume.md)
   * [查詢log](check_pod_log.md)
   * [連線到Pod檢視內部](connect_to_pod_internal.md)
-  * [使用secret功能](using_secret.md)
-  * [使用Deployment部署](use_deployment.md)
-  * [使用Service為服務增加外部IP](use_service_as_external_access_point.md)
-  * [Service中使用固定IP](use_static_ip.md)
-  * [在Deployment部署下Scaleout](scaleout_deployment.md)
+  * Secret
+    * [使用secret功能](using_secret.md)
+  * Deployment
+    * [使用Deployment部署](use_deployment.md)
+  * Service
+    * [使用Service為服務增加外部IP](use_service_as_external_access_point.md)
+    * [Service中使用固定IP](use_static_ip.md)
+  * Scaling
+    * [在Deployment部署下Scaleout](scaleout_deployment.md)
   * [一個完整的Web服務部署](web.md)
   * [從Deployment更新Image版本](rolling_update_deployment.md)
-  * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
+  * Ingress
+    * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
   * [檢視資源使用狀態](k8s-states.md)
   * [確認kubectl目前操作叢集資訊](kubectl.md)
 * K8S套件管理工具
