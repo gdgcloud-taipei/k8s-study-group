@@ -32,6 +32,7 @@
   * Service
     * [使用Service為服務增加外部IP](use_service_as_external_access_point.md)
     * [Service中使用固定IP](use_static_ip.md)
+    * [使用Session Affinity](shi-yong-session-affinity.md)
   * Scaling
     * [在Deployment部署下Scaleout](scaleout_deployment.md)
   * Ingress
