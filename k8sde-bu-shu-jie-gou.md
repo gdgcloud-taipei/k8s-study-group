@@ -2,7 +2,7 @@
 
 K8S在架構上透過Pod來封裝一個以上的container作為部署的最小單位，並且透過deployment來封裝pod，讓pod本身可以被監控與執行scale或rolling update等動作，整體的概念如下圖所示：
 
-
+![](/assets/gke-concept.png)
 
 * Pod封裝container作為部署的最小單位
 * 透過deployment或是relicaset等方式封裝pod運作的細節，如份數等等資訊
