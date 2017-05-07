@@ -37,6 +37,7 @@
     * [在Deployment部署下Scaleout](scaleout_deployment.md)
   * Ingress
     * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
+    * [在Ingress中使用固定IP](zai-ingress-zhong-shi-yong-gu-ding-ip.md)
   * [檢視資源使用狀態](k8s-states.md)
   * [確認kubectl目前操作叢集資訊](kubectl.md)
 * K8S套件管理工具
