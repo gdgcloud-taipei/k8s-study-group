@@ -79,6 +79,7 @@ spec:
 # kubectl create -f ingress.yaml
 ```
 
+如果一切無誤，可以從kubectl get看到相關設定
 
 ```
 # kubectl get secret,ingress
@@ -86,5 +87,5 @@ NAME                          TYPE                                  DATA      AG
 secrets/testsecret            Opaque                                2         1h
 
 NAME                         HOSTS     ADDRESS          PORTS     AGE
-myingress                    *         107.178.244.44   80, 443   1h
+myingress                    *         your-ip-address  80, 443   1h
 ```
