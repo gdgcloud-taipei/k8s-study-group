@@ -25,6 +25,7 @@
     * [連線到Pod檢視內部](connect_to_pod_internal.md)
   * Secret
     * [使用secret功能](using_secret.md)
+    * [建立SSL Ingress](jian-li-tls.md)
   * Deployment
     * [使用Deployment部署](use_deployment.md)
     * [一個完整的Web服務部署](web.md)

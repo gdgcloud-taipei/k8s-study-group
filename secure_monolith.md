@@ -37,7 +37,7 @@ kubectl describe secrets tls-certs
 ```
 
 
-建立一個給 nginx proxu 的 config map
+建立一個給 nginx proxy 的 config map
 
 ```
 kubectl create configmap nginx-proxy-conf --from-file=nginx/proxy.conf
