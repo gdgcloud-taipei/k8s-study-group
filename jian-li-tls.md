@@ -33,8 +33,23 @@ LS0tLS1CRUdJTiF...(skip)...UFJVVkFURSBLRVktLS1tLQo
 LS0tLS1CRUdJTi....(skip)....UFJKVkFURGBLRVktLS0tLQo
 ```
 
-編輯好TLS yaml檔案後，可以透過下面指令將該secret部署到k8s上...
+編輯完後，yaml檔案應該會像下面一樣：
 
+```
+apiVersion: v1
+data:
+  tls.crt: LS0tLS1CRUdJTi....(skip)....UFJKVkFURGBLRVktLS0tLQo
+  tls.key: LS0tLS1CRUdJTiF...(skip)...UFJVVkFURSBLRVktLS1tLQo
+kind: Secret
+metadata:
+  name: testsecret
+  namespace: default
+type: Opaque
+```
+
+
+
+編輯好TLS yaml檔案後，可以透過下面指令將該secret部署到k8s上...
 
 ```
 # kubectl create -f secret-tls.yaml
@@ -42,15 +57,34 @@ LS0tLS1CRUdJTi....(skip)....UFJKVkFURGBLRVktLS0tLQo
 
 ## 建立Ingress物件
 
+接著可以直接在ingress上加上該TLS設定，如下：
+
+[ingress.yaml]
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: no-rules-map
+  name: myingress
 spec:
   tls:
     - secretName: testsecret
   backend:
     serviceName: s1
     servicePort: 80
+```
+
+最後將該ingress yaml檔案部署上k8s...
+
+```
+# kubectl create -f ingress.yaml
+```
+
+
+```
+# kubectl get secret,ingress
+NAME                          TYPE                                  DATA      AGE
+secrets/testsecret            Opaque                                2         1h
+
+NAME                         HOSTS     ADDRESS          PORTS     AGE
+myingress                    *         107.178.244.44   80, 443   1h
 ```
