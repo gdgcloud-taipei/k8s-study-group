@@ -25,7 +25,6 @@
     * [連線到Pod檢視內部](connect_to_pod_internal.md)
   * Secret
     * [使用secret功能](using_secret.md)
-    * [建立SSL Ingress](jian-li-tls.md)
   * Deployment
     * [使用Deployment部署](use_deployment.md)
     * [一個完整的Web服務部署](web.md)
@@ -39,6 +38,7 @@
   * Ingress
     * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
     * [在Ingress中使用固定IP](zai-ingress-zhong-shi-yong-gu-ding-ip.md)
+    * [建立SSL Ingress](jian-li-tls.md)
   * [檢視資源使用狀態](k8s-states.md)
   * [確認kubectl目前操作叢集資訊](kubectl.md)
 * K8S套件管理工具
