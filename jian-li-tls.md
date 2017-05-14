@@ -89,3 +89,7 @@ secrets/testsecret            Opaque                                2         1h
 NAME                         HOSTS     ADDRESS          PORTS     AGE
 myingress                    *         your-ip-address  80, 443   1h
 ```
+
+## 參考
+
+* 官方TLS說明：https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
