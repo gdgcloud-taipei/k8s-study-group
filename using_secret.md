@@ -1,6 +1,6 @@
 # 使用secret
 
-secret是一份yaml文件，其中密文透過base64進行加密，待import進k8s之後，可以透過secret volume的方式掛載給其他Pod使用，Pod中所見的資料即會是一份文字檔案。
+secret是一份yaml文件，其中密文透過base64進行加密，待import進k8s之後，可以透過secret volume的方式掛載給其他Pod使用，Pod中所見的資料即會是一份明文文字檔案。
 
 secret 會存放至記憶體中。避免被意外的存取。確保了從kubernetes 到 secret 取用的傳輸安全。
 
