@@ -2,6 +2,12 @@
 
 secret是一份yaml文件，其中密文透過base64進行加密，待import進k8s之後，可以透過secret volume的方式掛載給其他Pod使用，Pod中所見的資料即會是一份文字檔案。
 
+secret 會存放至記憶體中。避免被意外的存取。確保了從kubernetes 到 secret 取用的傳輸安全。
+
+現有的 secret （generic）是使用 base64，因此使用 base64 -d 即可解開。
+
+使用情境及安全性考量請參考[官方文件](https://kubernetes.io/docs/concepts/configuration/secret/#security-properties)
+
 ## Secret文件
 
 ### 準備加密字串
@@ -171,8 +177,8 @@ spec:
         secretKeyRef:
           name: test-secret
           key: data-2
-          
-$ kubectl apply -f secretByEnv-pod.yaml 
+
+$ kubectl apply -f secretByEnv-pod.yaml
 ```
 
 ### 檢視
