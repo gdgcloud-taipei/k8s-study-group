@@ -23,7 +23,7 @@
     * [幫Pod增加Persistence Volume](add_persistence_volume.md)
     * [查詢log](check_pod_log.md)
     * [連線到Pod檢視內部](connect_to_pod_internal.md)
-  * Secret
+  * [Secret](secret.md)
     * [使用secret功能](using_secret.md)
   * Deployment
     * [使用Deployment部署](use_deployment.md)

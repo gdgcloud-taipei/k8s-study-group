@@ -7,6 +7,7 @@ secret是一份yaml文件，其中密文透過base64進行加密，待import進k
 ### 準備加密字串
 
 首先，需要把要加密的字串以base64的方式先準備好
+
 ```
 # echo -n "simonsu" | base64
 c2ltb25zdQ==
@@ -26,11 +27,10 @@ cat key.json | base64
 cat key.json | base64 -w 0
 ```
 
-
-
 ### Secret yaml文件
 
-[file: secret.yaml]
+\[file: secret.yaml\]
+
 ```
 apiVersion: v1
 kind: Secret
@@ -47,11 +47,12 @@ data:
 kubectl create -f secret.yaml
 ```
 
-## 建立使用Secret的Pod
+## 建立使用Secret的Pod （使用volume）
 
 ### Pod文件
 
-[file: secret-pod.yaml]
+\[file: secret-pod.yaml\]
+
 ```
 apiVersion: v1
 kind: Pod
@@ -105,17 +106,17 @@ type: Opaque
 
 ```
 # kubectl describe secret test-secret
-Name:		test-secret
-Namespace:	default
-Labels:		<none>
-Annotations:	<none>
+Name:        test-secret
+Namespace:    default
+Labels:        <none>
+Annotations:    <none>
 
-Type:	Opaque
+Type:    Opaque
 
 Data
 ====
-data-1:	7 bytes
-data-2:	22 bytes
+data-1:    7 bytes
+data-2:    22 bytes
 ```
 
 ### 從Pod內檢視Secret文件
@@ -129,6 +130,7 @@ secret-test-pod   1/1       Running   0          6m
 ```
 
 登入pod檢視所帶入的secret檔案資料
+
 ```
 # kubectl exec  secret-test-pod -it sh
 /app # 
@@ -136,7 +138,56 @@ secret-test-pod   1/1       Running   0          6m
 simonsu/app #
 ```
 
+## 將 secret 用於 env
+
+承上例，我們將NAME 和EMAIL兩個環境變數從secret取得，並輸出至stdout:
+
+使用方式和 configMaps 一致。
+
+```
+$ cat secretByEnv-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secret-by-env
+spec:
+  containers:
+  - name: busydayeasylife
+    image: gcr.io/google_containers/busybox:1.24
+    command:
+    - /bin/sh
+    - -c
+    - --
+    args:
+    - "while [ true ]; do echo $NAME; echo $EMAIL; sleep 30; done;"
+    env:
+    - name: NAME
+      valueFrom:
+        secretKeyRef:
+          name: test-secret
+          key: data-1
+    - name: EMAIL
+      valueFrom:
+        secretKeyRef:
+          name: test-secret
+          key: data-2
+          
+$ kubectl apply -f secretByEnv-pod.yaml 
+```
+
+### 檢視
+
+```
+$ kubectl logs secret-by-env
+simonsu
+simonsu.mail@gmail.com
+```
+
 ## 參考
 
-* 官方secret walkthrough: http://kubernetes.io/docs/user-guide/secrets/walkthrough/
-* 官方secret說明：http://kubernetes.io/docs/user-guide/secrets/#decoding-a-secret
+* 官方secret walkthrough: [http://kubernetes.io/docs/user-guide/secrets/walkthrough/](http://kubernetes.io/docs/user-guide/secrets/walkthrough/)
+* 官方secret說明：[http://kubernetes.io/docs/user-guide/secrets/\#decoding-a-secret](http://kubernetes.io/docs/user-guide/secrets/#decoding-a-secret)
+* 官方secret concept: [https://kubernetes.io/docs/concepts/configuration/secret/\#using-secrets-as-environment-variables](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables)
+
+
+
