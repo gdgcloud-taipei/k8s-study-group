@@ -96,7 +96,44 @@ Kubectl is now configured to use the cluster.
 
 ![minikube ssh](assets/minikube-ssh.png)
 
-## 參考文件
+## 使用 docker machine kvm driver 開 minikube 
+
+[裝了kvm](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm-driver)後，可以使用docker machine driver kvm 來建立minikube：
+
+1.[準備kvm driver](https://github.com/dhiltgen/docker-machine-kvm/releases)，以Linux Ubuntu 16.04 為例:
+
+```
+$ curl -o docker-machine-driver-kvm \
+  -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.10.0/docker-machine-driver-kvm-ubuntu16.04 \
+  && chmod +x docker-machine-driver-kvm \ 
+  && sudo mv docker-machine-driver-kvm /usr/local/bin
+```
+
+2. 啟動minikube 或寫入 config
+
+單次使用：
+
+```
+$ minikube start --vm-driver=kvm
+```
+
+寫入config:
+
+minikube config 預設路徑於 ~/.minikube/config/config.json
+
+加入 entity : "vm-driver": "kvm" 
+
+\[config.json\]
+
+```
+{
+    "vm-driver": "kvm"
+}
+```
+
+即可正常使用 minikube start 。
+
+### 參考文件
 
 * minikube readme: [https://github.com/kubernetes/minikube/blob/master/README.md](https://github.com/kubernetes/minikube/blob/master/README.md)
 * minikube release note: [https://github.com/kubernetes/minikube/releases](https://github.com/kubernetes/minikube/releases)
