@@ -7,7 +7,9 @@ kubernetes.io發佈了一個供本地端單機跑kubernetes最精簡的環境min
 安裝的部分要看您的主機是哪種OS，下面是Mac OS的安裝方式
 
 ```
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.6.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.6.0/minikube-darwin-amd64 \ 
+  && chmod +x minikube \ 
+  && sudo mv minikube /usr/local/bin/
 ```
 
 其他的操作部分都是使用kubectl，可以參考kubernetes的指令...
@@ -96,7 +98,50 @@ Kubectl is now configured to use the cluster.
 
 ![minikube ssh](assets/minikube-ssh.png)
 
-## 參考文件
+## 使用 docker machine kvm driver 開 minikube
+
+[裝了kvm](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm-driver)後，可以使用docker machine driver kvm 來建立minikube：
+
+1.[準備kvm driver](https://github.com/dhiltgen/docker-machine-kvm/releases)，以Linux Ubuntu 16.04 為例:
+
+```
+$ curl -o docker-machine-driver-kvm \
+  -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.10.0/docker-machine-driver-kvm-ubuntu16.04 \
+  && chmod +x docker-machine-driver-kvm \ 
+  && sudo mv docker-machine-driver-kvm /usr/local/bin
+```
+
+2.啟動minikube 或寫入 config
+
+單次使用：
+
+```
+$ minikube start --vm-driver=kvm
+```
+
+寫入config:
+
+a. minikube config 預設路徑於 ~/.minikube/config/config.json
+
+加入 entity : "vm-driver": "kvm" 
+
+\[config.json\]
+
+```
+{
+    "vm-driver": "kvm"
+}
+```
+
+b. 或使用指令寫入config
+
+```
+minikube config set vm-driver kvm
+```
+
+3. 即可正常使用 minikube start  啟動。
+
+### 參考文件
 
 * minikube readme: [https://github.com/kubernetes/minikube/blob/master/README.md](https://github.com/kubernetes/minikube/blob/master/README.md)
 * minikube release note: [https://github.com/kubernetes/minikube/releases](https://github.com/kubernetes/minikube/releases)
