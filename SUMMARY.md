@@ -42,6 +42,7 @@
     * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
     * [在Ingress中使用固定IP](zai-ingress-zhong-shi-yong-gu-ding-ip.md)
     * [建立SSL Ingress](jian-li-tls.md)
+    * Ingress with Multi domain
   * [檢視資源使用狀態](k8s-states.md)
   * [確認kubectl目前操作叢集資訊](kubectl.md)
 * K8S套件管理工具
