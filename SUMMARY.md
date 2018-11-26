@@ -47,20 +47,16 @@
   * [檢視資源使用狀態](k8s-states.md)
   * [確認kubectl目前操作叢集資訊](kubectl.md)
 * K8S套件管理工具
-
   * [helm](helm.md)
-
-* [Kubernetes monitoring](kubernetes-monitoring.md)
-
+* Kubernetes monitoring
   * [Prometheus](kubernetes-monitoring/prometheus.md)
-
-* [Kubeconfig management](kubeconfig-management.md)
+* Kubeconfig management
   * [vim 也可以管理 Kubernetes](vim-ye-ke-yi-guan-li-kubernetes.md)
   * [結合 fish shell script 管理 kubernetes](jie-he-fish-shell-script-guan-li-kubernetes.md)
 * [Kubernetes Log](kubernetes-log.md)
   * [使用 ELK 收集 Kubernetes Logs](shi-yong-elk-shou-ji-kubernetes-logs.md)
-* Security
-  * Kubernetes Vault
+* [Security](security.md)
+  * [Kubernetes Vault](security/kubernetes-vault.md)
 
 
 
