@@ -48,6 +48,7 @@
   * [helm](helm.md)
 * [vim 也可以管理 Kubernetes](vim-ye-ke-yi-guan-li-kubernetes.md)
 * [結合 fish shell script 管理 kubernetes](jie-he-fish-shell-script-guan-li-kubernetes.md)
-* [Kubernetes monitoring](kubernetes-monitoring.md)
+* Kubernetes monitoring
+  * [Prometheus]()
 * [Kubeconfig management](kubeconfig-management.md)
 
