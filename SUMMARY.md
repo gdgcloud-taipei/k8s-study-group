@@ -48,11 +48,9 @@
   * [helm](helm.md)
 * [vim 也可以管理 Kubernetes](vim-ye-ke-yi-guan-li-kubernetes.md)
 * [結合 fish shell script 管理 kubernetes](jie-he-fish-shell-script-guan-li-kubernetes.md)
-* Kubernetes monitoring
-  * [Prometheus]()
+* [Kubernetes monitoring](kubernetes-monitoring.md)
+  * [Prometheus](kubernetes-monitoring/prometheus.md)
 * [Kubeconfig management](kubeconfig-management.md)
-* Kubernetes Log
-  * 使用 ELK 收集 Kubernetes Logs
-
-
+* [Kubernetes Log](kubernetes-log.md)
+  * [使用 ELK 收集 Kubernetes Logs](shi-yong-elk-shou-ji-kubernetes-logs.md)
 
