@@ -4,17 +4,21 @@
   * [Kubernetes概念](kubernetes_concept.md)
 * [從安裝說起](installation.md)
   * [單機版K8S - minikube](minikube.md)
+  * 單機版 K8S - docker for desktop
   * [使用docker-compose安裝kubernetes](install-from-docker-compose.md)
+  * [使用 kubeadm 來建立 Kubernetes Cluster](kubeadm_kubernetes_cluster.md)
+  * [使用 terraform 來建立 kubernetes cluster](shi-yong-terraform-lai-jian-li-kubernetes-cluster.md)
+  * 使用 Kubespray 來建立 cluster
   * [快速安裝K8S在GCE主機上](install-to-gce.md)
   * [使用hyperkube image安裝K8S](use-hyperkube-image-install.md)
   * [使用kube-deploy安裝multi-node cluster](use-kube-deploy-install-multi-node-cluster.md)
   * [安裝kubectl](install-kubectl.md)
-  * [使用 kubeadm 來建立 Kubernetes Cluster](kubeadm_kubernetes_cluster.md)
 * [基本操作](basic-operation.md)
   * [查詢kubectl的資源](kubectl_get_xxx.md)
   * [建立nginx http server](run_nginx_http_server.md)
   * [建立一個具有 TLS 的 nginx 連線](secure_monolith.md)
   * [K8S的部屬結構](k8sde-bu-shu-jie-gou.md)
+  * [ConfigMap 的使用](configmap-de-shi-yong.md)
 * [進階操作](advance-operation.md)
   * Pod
     * [使用YAML描述部署Pod](deploy_using_yaml.md)
@@ -39,8 +43,18 @@
     * [使用Ingress連結Layer7 Load Balancer](use_ingress.md)
     * [在Ingress中使用固定IP](zai-ingress-zhong-shi-yong-gu-ding-ip.md)
     * [建立SSL Ingress](jian-li-tls.md)
+    * Ingress with Multi domain
   * [檢視資源使用狀態](k8s-states.md)
   * [確認kubectl目前操作叢集資訊](kubectl.md)
 * K8S套件管理工具
   * [helm](helm.md)
+* [Kubernetes monitoring](kubernetes-monitoring.md)
+  * [Prometheus](kubernetes-monitoring/prometheus.md)
+* [Kubeconfig management](kubeconfig-management.md)
+  * [vim 也可以管理 Kubernetes](vim-ye-ke-yi-guan-li-kubernetes.md)
+  * [結合 fish shell script 管理 kubernetes](jie-he-fish-shell-script-guan-li-kubernetes.md)
+* [Kubernetes Log](kubernetes-log.md)
+  * [使用 ELK 收集 Kubernetes Logs](shi-yong-elk-shou-ji-kubernetes-logs.md)
+* [Security](security.md)
+  * [Kubernetes Vault](security/kubernetes-vault.md)
 
