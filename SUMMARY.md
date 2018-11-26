@@ -4,12 +4,15 @@
   * [Kubernetes概念](kubernetes_concept.md)
 * [從安裝說起](installation.md)
   * [單機版K8S - minikube](minikube.md)
+  * 單機版 K8S - docker for desktop
   * [使用docker-compose安裝kubernetes](install-from-docker-compose.md)
+  * [使用 kubeadm 來建立 Kubernetes Cluster](kubeadm_kubernetes_cluster.md)
+  * [使用 terraform 來建立 kubernetes cluster](shi-yong-terraform-lai-jian-li-kubernetes-cluster.md)
+  * 使用 Kubespray 來建立 cluster
   * [快速安裝K8S在GCE主機上](install-to-gce.md)
   * [使用hyperkube image安裝K8S](use-hyperkube-image-install.md)
   * [使用kube-deploy安裝multi-node cluster](use-kube-deploy-install-multi-node-cluster.md)
   * [安裝kubectl](install-kubectl.md)
-  * [使用 kubeadm 來建立 Kubernetes Cluster](kubeadm_kubernetes_cluster.md)
 * [基本操作](basic-operation.md)
   * [查詢kubectl的資源](kubectl_get_xxx.md)
   * [建立nginx http server](run_nginx_http_server.md)
@@ -43,4 +46,8 @@
   * [確認kubectl目前操作叢集資訊](kubectl.md)
 * K8S套件管理工具
   * [helm](helm.md)
+* [vim 也可以管理 Kubernetes](vim-ye-ke-yi-guan-li-kubernetes.md)
+* [結合 fish shell script 管理 kubernetes](jie-he-fish-shell-script-guan-li-kubernetes.md)
+* [Kubernetes monitoring](kubernetes-monitoring.md)
+* [Kubeconfig management](kubeconfig-management.md)
 
