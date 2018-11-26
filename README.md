@@ -16,7 +16,5 @@ GCPUG透過網際網路串聯喜好Google Cloud的使用者，分享與交流使
 
 ### Cage Chung
 
-目前為 GPU
-
-
+目前為GCPUG.TW co-organizer，為Google Cloud APAC地區Certificated Trainer以及[Google Cloud Platform Developer Expert](https://developers.google.com/experts/people/peihsin-su)。主要熱衷於雲端、開發、Serverless 相關之建置與研究。
 
