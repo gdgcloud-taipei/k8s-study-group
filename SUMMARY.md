@@ -3,7 +3,7 @@
 * [簡介](README.md)
   * [Kubernetes概念](kubernetes_concept.md)
 * [從安裝說起](installation.md)
-  * [單機版K8S - minikube](minikube.md)
+  * [單機版 K8S - minikube](minikube.md)
   * 單機版 K8S - docker for desktop
   * [使用docker-compose安裝kubernetes](install-from-docker-compose.md)
   * [使用 kubeadm 來建立 Kubernetes Cluster](kubeadm_kubernetes_cluster.md)
